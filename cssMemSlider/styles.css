@@ -10,11 +10,18 @@ header {
     height: 10vh;
 }
 .radio {
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     background-color: red;
-    border: 1px solid black;
+    border-radius: 50%;
+    border: 0.2rem solid red;
     cursor: pointer;
+    transition: background-color, border 0.5s;
+}
+.radio:hover {
+    background-color: transparent;
+    border: 0.2rem solid yellow;
+    transition: background-color, border 0.5s;
 }
 .slider {
     display: flex;
@@ -77,10 +84,17 @@ header {
 #first:checked ~ .slider-text-visible .slider-text {
     margin-left: 0;
 }
+#first:checked ~ .slider-controls label[for=first] div{
+    background-color: transparent;
+}
 #second:checked ~ .slider-content-visible .slider-content{
     margin-left: -100%;
 }
 #second:checked ~ .slider-text-visible .slider-text {
     margin-left: -100%;
 }
+#second:checked ~ .slider-controls label[for=second] div{
+    background-color: transparent;
+}
+
 
