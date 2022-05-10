@@ -20,11 +20,19 @@ header {
     cursor: pointer;
     transition: background-color, border 0.5s;
 }
-.radio:hover {
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+}
+label:hover .radio{
     background-color: #9ebaef;
     transition: background-color 0.5s;
 }
-.radio:active {
+label:active .radio {
     background-color: gray;
     transition: background-color 0.5s;
 }
@@ -40,7 +48,7 @@ header {
     width: 50%;
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 0.5rem;
     justify-content: flex-end;
 }
 .slider-content-visible {
@@ -104,11 +112,11 @@ header {
     background-color: transparent;
     border: 0.2em solid #606E8C;
 }
-#first:checked ~ .slider-controls label[for=first] div:hover{
+#first:checked ~ .slider-controls label[for=first]:hover div{
     border-color: #9ebaef;
     transition: border 0.5s;
 }
-#first:checked ~ .slider-controls label[for=first] div:active{
+#first:checked ~ .slider-controls label[for=first]:active div{
     border-color: gray;
 }
 /*SECOND*/
@@ -122,11 +130,11 @@ header {
     background-color: transparent;
     border: 0.2em solid #606E8C;
 }
-#second:checked ~ .slider-controls label[for=second] div:hover{
+#second:checked ~ .slider-controls label[for=second]:hover div{
     border-color: #9ebaef;
     transition: border 0.5s;
 }
-#second:checked ~ .slider-controls label[for=second] div:active{
+#second:checked ~ .slider-controls label[for=second]:active div{
     border-color: gray;
 }
 /*THIRD*/
@@ -140,11 +148,11 @@ header {
     background-color: transparent;
     border: 0.2em solid #606E8C;
 }
-#third:checked ~ .slider-controls label[for=third] div:hover{
+#third:checked ~ .slider-controls label[for=third]:hover div{
     border-color: #9ebaef;
     transition: border 0.5s;
 }
-#third:checked ~ .slider-controls label[for=third] div:active{
+#third:checked ~ .slider-controls label[for=third]:active div{
     border-color: gray;
 }
 /*FOURTH*/
@@ -158,11 +166,11 @@ header {
     background-color: transparent;
     border: 0.2em solid #606E8C;
 }
-#fourth:checked ~ .slider-controls label[for=fourth] div:hover{
+#fourth:checked ~ .slider-controls label[for=fourth]:hover div{
     border-color: #9ebaef;
     transition: border 0.5s;
 }
-#fourth:checked ~ .slider-controls label[for=fourth] div:active{
+#fourth:checked ~ .slider-controls label[for=fourth]:active div{
     border-color: gray;
 }
 
