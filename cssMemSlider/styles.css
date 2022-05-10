@@ -42,7 +42,7 @@ label:active .radio {
     flex-wrap: wrap;
     margin: auto;
     width: 90%;
-    max-width: 70rem;
+    row-gap: 3rem;
 }
 .slider-controls {
     width: 50%;
@@ -53,10 +53,9 @@ label:active .radio {
 }
 .slider-content-visible {
     width: 100%;
-    height: 40rem;
+    height: 50vw;
     overflow-x: hidden;
     border-radius: 1rem;
-    margin-bottom: 3rem;
     box-shadow: 0.8rem 1rem 1rem 0 rgba(0, 0, 0, 0.34);
 }
 .slider-content {
@@ -87,6 +86,7 @@ label:active .radio {
 .slider-text-visible {
     width: 50%;
     overflow-x: hidden;
+    margin: auto;
 }
 .slider-text {
     width: 100%;
@@ -173,4 +173,30 @@ label:active .radio {
 #fourth:checked ~ .slider-controls label[for=fourth]:active div{
     border-color: gray;
 }
+@media (max-width: 640px) {
+    .slider {
+        row-gap: 1rem;
+    }
+    .slider-controls {
+        width: 100%;
+        order: 2;
+    }
+    .slider-text-visible {
+        order: 3;
+        margin: 0;
+        width: 100%;
+    }
+    .radio {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    label {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    h1  {
+        font-size: 1.5rem;
+    }
+}
+
 
