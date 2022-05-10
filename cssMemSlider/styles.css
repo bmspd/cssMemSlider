@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: darkgrey;
+}
 .invisible {
     display: none;
 }
@@ -12,37 +15,41 @@ header {
 .radio {
     width: 2em;
     height: 2em;
-    background-color: red;
+    background-color: #606E8C;
     border-radius: 50%;
-    border: 0.2rem solid red;
     cursor: pointer;
     transition: background-color, border 0.5s;
 }
 .radio:hover {
-    background-color: transparent;
-    border: 0.2rem solid yellow;
-    transition: background-color, border 0.5s;
+    background-color: #9ebaef;
+    transition: background-color 0.5s;
+}
+.radio:active {
+    background-color: gray;
+    transition: background-color 0.5s;
 }
 .slider {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-    width: 90vw;
-    background-color: lightpink;
-    //overflow-x: hidden;
+    width: 90%;
+    max-width: 70rem;
 }
 .slider-controls {
     width: 50%;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1.5rem;
     justify-content: flex-end;
 }
 .slider-content-visible {
     width: 100%;
-    height: 30vh;
+    height: 40rem;
     overflow-x: hidden;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0.8rem 1rem 1rem 0 rgba(0, 0, 0, 0.34);
 }
 .slider-content {
     width:100%;
@@ -55,7 +62,7 @@ header {
     flex-shrink: 0;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
+
 }
 #pic-1 {
     background-color: lightblue;
@@ -63,7 +70,12 @@ header {
 #pic-2 {
     background-color: lavender;
 }
-
+#pic-3 {
+    background-color: green;
+}
+#pic-4 {
+    background-color: black;
+}
 .slider-text-visible {
     width: 50%;
     overflow-x: hidden;
@@ -78,6 +90,10 @@ header {
     width: 100%;
     flex-shrink: 0;
 }
+/*FIRST*/
+.slider-content,.slider-text {
+    transition: margin-left 1s;
+}
 #first:checked ~ .slider-content-visible .slider-content {
     margin-left: 0;
 }
@@ -86,7 +102,16 @@ header {
 }
 #first:checked ~ .slider-controls label[for=first] div{
     background-color: transparent;
+    border: 0.2em solid #606E8C;
 }
+#first:checked ~ .slider-controls label[for=first] div:hover{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#first:checked ~ .slider-controls label[for=first] div:active{
+    border-color: gray;
+}
+/*SECOND*/
 #second:checked ~ .slider-content-visible .slider-content{
     margin-left: -100%;
 }
@@ -95,6 +120,49 @@ header {
 }
 #second:checked ~ .slider-controls label[for=second] div{
     background-color: transparent;
+    border: 0.2em solid #606E8C;
 }
-
+#second:checked ~ .slider-controls label[for=second] div:hover{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#second:checked ~ .slider-controls label[for=second] div:active{
+    border-color: gray;
+}
+/*THIRD*/
+#third:checked ~ .slider-content-visible .slider-content {
+    margin-left: -200%;
+}
+#third:checked ~ .slider-text-visible .slider-text {
+    margin-left: -200%;
+}
+#third:checked ~ .slider-controls label[for=third] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#third:checked ~ .slider-controls label[for=third] div:hover{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#third:checked ~ .slider-controls label[for=third] div:active{
+    border-color: gray;
+}
+/*FOURTH*/
+#fourth:checked ~ .slider-content-visible .slider-content {
+    margin-left: -300%;
+}
+#fourth:checked ~ .slider-text-visible .slider-text {
+    margin-left: -300%;
+}
+#fourth:checked ~ .slider-controls label[for=fourth] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#fourth:checked ~ .slider-controls label[for=fourth] div:hover{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#fourth:checked ~ .slider-controls label[for=fourth] div:active{
+    border-color: gray;
+}
 
