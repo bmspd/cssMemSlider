@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1 {
+    font-size: 4rem;
+    height: auto;
+    vertical-align: middle;
+    font-family: 'Patrick Hand', cursive;
+}
 body {
     background-color: darkgrey;
 }
@@ -50,10 +56,11 @@ label:active .radio {
     flex-direction: row;
     gap: 0.5rem;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 .slider-content-visible {
     width: 100%;
-    height: 50vw;
+    height: 70vw;
     overflow-x: hidden;
     border-radius: 1rem;
     box-shadow: 0.8rem 1rem 1rem 0 rgba(0, 0, 0, 0.34);
@@ -71,17 +78,27 @@ label:active .radio {
     width: 100%;
 
 }
+#pic-1,#pic-2,#pic-3,#pic-4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
 #pic-1 {
-    background-color: lightblue;
+    background-color: white;
+    background-image: url("./asssets/img/first.jpeg");
+    background-size: 100% 60vw;
 }
 #pic-2 {
     background-color: lavender;
+    background-image: url("./asssets/img/second.jpeg");
 }
 #pic-3 {
     background-color: green;
+    background-image: url("./asssets/img/third.jpeg");
 }
 #pic-4 {
     background-color: black;
+    background-image: url("./asssets/img/fourth.jpeg");
 }
 .slider-text-visible {
     width: 50%;
@@ -180,6 +197,7 @@ label:active .radio {
     .slider-controls {
         width: 100%;
         order: 2;
+        justify-content: center;
     }
     .slider-text-visible {
         order: 3;
