@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 4rem;
+    height: auto;
+    vertical-align: middle;
+    font-family: 'Patrick Hand', cursive;
+}
+body {
+    background-color: darkgrey;
+}
+.invisible {
+    display: none;
+}
+header {
+    height: 10vh;
+}
+.radio {
+    width: 2em;
+    height: 2em;
+    background-color: #606E8C;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color, border 0.5s;
+}
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+}
+label:hover .radio{
+    background-color: #9ebaef;
+    transition: background-color 0.5s;
+}
+label:active .radio {
+    background-color: gray;
+    transition: background-color 0.5s;
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 60%;
+    row-gap: 3rem;
+}
+.slider-controls {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.slider-content-visible {
+    width: 100%;
+    height: 40vw;
+    overflow-x: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.8rem 1rem 1rem 0 rgba(0, 0, 0, 0.34);
+}
+.slider-content {
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.slider-image {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+
+}
+#pic-1,#pic-2,#pic-3,#pic-4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+#pic-1 {
+    background-color: white;
+    background-image: url("./asssets/img/first.jpeg");
+    /*background-size: 100% 60vw;*/
+}
+#pic-2 {
+    background-color: lavender;
+    background-image: url("./asssets/img/second.jpeg");
+}
+#pic-3 {
+    background-color: green;
+    background-image: url("./asssets/img/third.jpeg");
+}
+#pic-4 {
+    background-color: black;
+    background-image: url("./asssets/img/fourth.jpeg");
+}
+.slider-text-visible {
+    width: 50%;
+    overflow-x: hidden;
+    margin: auto;
+}
+.slider-text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.slider-text h1 {
+    width: 100%;
+    flex-shrink: 0;
+}
+/*FIRST*/
+.slider-content,.slider-text {
+    transition: margin-left 1s;
+}
+#first:checked ~ .slider-content-visible .slider-content {
+    margin-left: 0;
+}
+#first:checked ~ .slider-text-visible .slider-text {
+    margin-left: 0;
+}
+#first:checked ~ .slider-controls label[for=first] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#first:checked ~ .slider-controls label[for=first]:hover div{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#first:checked ~ .slider-controls label[for=first]:active div{
+    border-color: gray;
+}
+/*SECOND*/
+#second:checked ~ .slider-content-visible .slider-content{
+    margin-left: -100%;
+}
+#second:checked ~ .slider-text-visible .slider-text {
+    margin-left: -100%;
+}
+#second:checked ~ .slider-controls label[for=second] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#second:checked ~ .slider-controls label[for=second]:hover div{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#second:checked ~ .slider-controls label[for=second]:active div{
+    border-color: gray;
+}
+/*THIRD*/
+#third:checked ~ .slider-content-visible .slider-content {
+    margin-left: -200%;
+}
+#third:checked ~ .slider-text-visible .slider-text {
+    margin-left: -200%;
+}
+#third:checked ~ .slider-controls label[for=third] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#third:checked ~ .slider-controls label[for=third]:hover div{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#third:checked ~ .slider-controls label[for=third]:active div{
+    border-color: gray;
+}
+/*FOURTH*/
+#fourth:checked ~ .slider-content-visible .slider-content {
+    margin-left: -300%;
+}
+#fourth:checked ~ .slider-text-visible .slider-text {
+    margin-left: -300%;
+}
+#fourth:checked ~ .slider-controls label[for=fourth] div{
+    background-color: transparent;
+    border: 0.2em solid #606E8C;
+}
+#fourth:checked ~ .slider-controls label[for=fourth]:hover div{
+    border-color: #9ebaef;
+    transition: border 0.5s;
+}
+#fourth:checked ~ .slider-controls label[for=fourth]:active div{
+    border-color: gray;
+}
+@media (max-width: 640px) {
+    .slider {
+        row-gap: 1rem;
+        width: 90%;
+    }
+    .slider-content-visible {
+        height: 60vw;
+    }
+    .slider-controls {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+    }
+    .slider-text-visible {
+        order: 3;
+        margin: 0;
+        width: 100%;
+    }
+    .radio {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    label {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    h1  {
+        font-size: 1.5rem;
+    }
+}
+
+
